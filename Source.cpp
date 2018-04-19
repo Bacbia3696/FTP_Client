@@ -303,6 +303,7 @@ void sendQuit(SOCKET s)
 	sprintf(buffer, "QUIT \r\n\0", tp);
 	send_mess(s);
 	recv_mess(s);
+	closesocket(s);
 	printf("%sProgram exit sucessfully ^^...!\n\n", buffer);
 	getchar();
 	exit(0);

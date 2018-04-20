@@ -304,6 +304,7 @@ void sendQuit(SOCKET s)
 	send_mess(s);
 	recv_mess(s);
 	closesocket(s);
+	WSACleanup();
 	printf("%sProgram exit sucessfully ^^...!\n\n", buffer);
 	getchar();
 	exit(0);

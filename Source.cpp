@@ -303,8 +303,11 @@ void sendQuit(SOCKET s)
 	sprintf(buffer, "QUIT \r\n\0", tp);
 	send_mess(s);
 	recv_mess(s);
+<<<<<<< HEAD
 	closesocket(s);
 	WSACleanup();
+=======
+>>>>>>> parent of 99f13f1... add
 	printf("%sProgram exit sucessfully ^^...!\n\n", buffer);
 	getchar();
 	exit(0);
